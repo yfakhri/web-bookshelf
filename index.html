@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rak Buku-ku</title>
+    <link rel="stylesheet" href="assets/styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="jumbotron">
+        <h1>Rak Buku-ku</h1>
+        <p>Buku adalah jendela ilmu pengetahuan</p>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="#addMyBook">Tambah Buku-ku</a></li>
+          <li><a href="#searchMyBook">Cari Buku-ku</a></li>
+          <li><a href="#incompleteMyBook">Buku-ku Belum Dibaca</a></li>
+          <li><a href="#completeMyBook">Buku-ku Sudah Dibaca</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <aside>
+        <article class="intro">
+          <header>
+            <h2>Selamat Datang di Rak Buku-ku</h2>
+            <figure>
+              <img src="assets/image/bookshelf.jpg" />
+            </figure>
+          </header>
+          <section>
+            <p>
+              Haloo. Selamat datang di rak buku-ku. . Silahkan isi rak buku ini
+              agar menjadi penuh dengan buku. semakin banyak buku maka akan
+              semakin banyak juga jendela ilmu. jangan lupa untuk dibaca juga
+              yaaa.
+            </p>
+          </section>
+        </article>
+      </aside>
+
+      <div id="content">
+        <article>
+          <section id="addMyBook" class="input_section">
+            <h2>Tambah Buku-ku</h2>
+            <form id="inputBook">
+              <div class="input">
+                <label for="inputBookTitle">Judul</label>
+                <input id="inputBookTitle" type="text" required />
+              </div>
+              <div class="input">
+                <label for="inputBookAuthor">Penulis</label>
+                <input id="inputBookAuthor" type="text" required />
+              </div>
+              <div class="input">
+                <label for="inputBookYear">Tahun</label>
+                <input id="inputBookYear" type="number" required />
+              </div>
+              <div class="input_inline">
+                <label for="inputBookIsComplete">Selesai dibaca</label>
+                <input id="inputBookIsComplete" type="checkbox" />
+              </div>
+              <button id="bookSubmit" type="submit">
+                Masukkan Buku ke rak <span>Buku-ku Belum Dibaca</span>
+              </button>
+            </form>
+          </section>
+
+          <section id="searchMyBook" class="search_section">
+            <h2>Cari Buku-ku</h2>
+            <form id="searchBook">
+              <label for="searchBookTitle">Judul</label>
+              <input id="searchBookTitle" type="text" />
+              <button id="searchSubmit" type="submit">Cari</button>
+            </form>
+          </section>
+
+          <section id="incompleteMyBook" class="book_shelf">
+            <h2>Buku-ku Belum Dibaca</h2>
+            <div id="incompleteBookshelfList" class="book_list"></div>
+          </section>
+          <section id="completeMyBook" class="book_shelf">
+            <h2>Buku-ku Sudah Dibaca</h2>
+
+            <div id="completeBookshelfList" class="book_list"></div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <p>&#169; 2022 Rak Buku-Ku.</p>
+    </footer>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="modalCloseButton" class="modal-close">&times;</span>
+          <h2>Hapus Buku</h2>
+        </div>
+        <div class="modal-body">
+          <p>Apakah anda yakin ingin menghapus buku ini?</p>
+        </div>
+        <div class="modal-footer">
+          <btn id="modalCancelButton" class="btn-cancel">Batal</btn>
+          <btn id="modalDeleteButton" class="btn-delete">Hapus</btn>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/main.js" type="text/javascript"></script>
+  </body>
+</html>
